@@ -1,0 +1,500 @@
+/* ==========================================================
+   ABOUT PAGE
+   ========================================================== */
+
+.about-page {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* ==========================================================
+   SHARED CONTAINER
+   ========================================================== */
+
+.about-container {
+  width: 100%;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+}
+
+/* ==========================================================
+   LABEL
+   ========================================================== */
+
+.about-label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.about-label span {
+  color: var(--red);
+}
+
+.about-label--light {
+  color: var(--white);
+}
+
+.about-label--light span {
+  color: var(--yellow);
+}
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.about-hero {
+  min-height: 100vh;
+
+  padding-top: calc(var(--nav-h) + 5rem);
+  padding-bottom: 7rem;
+
+  display: flex;
+  align-items: flex-end;
+
+  border-bottom: 1px solid var(--black);
+}
+
+.about-hero__title {
+  margin-top: 3rem;
+
+  font-size: clamp(5rem, 15vw, 14rem);
+  font-stretch: 75%;
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+}
+
+.about-hero__title span {
+  color: var(--red);
+}
+
+.about-hero__intro {
+  margin-top: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  max-width: 65rem;
+
+  font-size: clamp(1.4rem, 3vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.about-hero__arrow {
+  width: 54px;
+  height: 54px;
+
+  flex: 0 0 auto;
+
+  display: grid;
+  place-items: center;
+
+  border: 2px solid var(--black);
+
+  transition:
+    background 0.3s var(--ease),
+    color 0.3s var(--ease);
+}
+
+.about-hero__arrow:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* ==========================================================
+   STORY
+   ========================================================== */
+
+.about-story {
+  padding-top: clamp(6rem, 12vw, 12rem);
+  padding-bottom: clamp(6rem, 12vw, 12rem);
+
+  border-bottom: 1px solid var(--black);
+}
+
+.about-story__grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.7fr)
+    minmax(18rem, 0.7fr);
+
+  gap: clamp(3rem, 8vw, 10rem);
+
+  align-items: start;
+}
+
+.about-story__main {
+  font-size: clamp(2rem, 4.2vw, 4.8rem);
+  font-weight: 700;
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+}
+
+.about-story__side {
+  padding-top: 0.5rem;
+
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.about-story__side p {
+  max-width: 42ch;
+}
+
+.about-link {
+  margin-top: 3rem;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding-bottom: 0.6rem;
+
+  border-bottom: 2px solid var(--black);
+
+  font-weight: 700;
+
+  transition:
+    color 0.25s var(--ease),
+    border-color 0.25s var(--ease);
+}
+
+.about-link:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+/* ==========================================================
+   DISCIPLINES
+   ========================================================== */
+
+.about-disciplines {
+  background: var(--grey);
+
+  padding-top: clamp(5rem, 10vw, 9rem);
+  padding-bottom: clamp(5rem, 10vw, 9rem);
+}
+
+.about-disciplines__head {
+  display: grid;
+
+  grid-template-columns: 1fr 0.55fr;
+
+  gap: 4rem;
+
+  margin-bottom: 5rem;
+}
+
+.about-disciplines__head h2 {
+  grid-column: 1 / 2;
+
+  margin-top: 2rem;
+
+  font-size: clamp(3.5rem, 9vw, 9rem);
+  font-stretch: 75%;
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.about-disciplines__head h2 span {
+  color: var(--red);
+}
+
+.about-disciplines__statement {
+  align-self: end;
+
+  max-width: 32ch;
+
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* ==========================================================
+   DISCIPLINE ROWS
+   ========================================================== */
+
+.discipline-list {
+  border-top: 2px solid var(--black);
+}
+
+.discipline-row {
+  --discipline-color: var(--black);
+  --discipline-ink: var(--white);
+
+  min-height: 7rem;
+
+  display: grid;
+
+  grid-template-columns:
+    5rem
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 2rem;
+
+  border-bottom: 2px solid var(--black);
+
+  transition:
+    background 0.35s var(--ease),
+    color 0.35s var(--ease),
+    padding 0.35s var(--ease);
+}
+
+/*
+   Each discipline gets its own official MET colour
+   when hovered.
+*/
+
+.discipline-row:hover {
+  background: var(--discipline-color);
+  color: var(--discipline-ink);
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.discipline-row__number {
+  color: var(--red);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+
+  transition: color 0.35s var(--ease);
+}
+
+.discipline-row:hover .discipline-row__number {
+  color: var(--discipline-ink);
+}
+
+.discipline-row h3 {
+  font-size: clamp(1.8rem, 4vw, 4rem);
+  font-stretch: 75%;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.discipline-row svg {
+  transition: transform 0.35s var(--ease);
+}
+
+.discipline-row:hover svg {
+  transform: translate(4px, -4px);
+}
+
+/* ==========================================================
+   QUOTE
+   ========================================================== */
+
+.about-quote {
+  background: var(--black);
+  color: var(--white);
+
+  padding-top: clamp(6rem, 12vw, 12rem);
+  padding-bottom: clamp(6rem, 12vw, 12rem);
+}
+
+.about-quote__mark {
+  color: var(--red);
+
+  font-size: clamp(5rem, 10vw, 10rem);
+  font-weight: 900;
+  line-height: 0.5;
+}
+
+.about-quote__text {
+  margin-top: 2rem;
+
+  max-width: 13ch;
+
+  font-size: clamp(3rem, 7vw, 8rem);
+  font-stretch: 75%;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.about-quote__author {
+  margin-top: 3rem;
+
+  color: var(--yellow);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================
+   FINAL CTA
+   ========================================================== */
+
+.about-final {
+  background: var(--red);
+  color: var(--white);
+
+  padding-top: clamp(5rem, 10vw, 9rem);
+  padding-bottom: clamp(5rem, 10vw, 9rem);
+}
+
+.about-final__title {
+  margin-top: 3rem;
+
+  font-size: clamp(4rem, 13vw, 14rem);
+  font-stretch: 75%;
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+}
+
+.about-final__title span {
+  color: var(--black);
+}
+
+.about-final__bottom {
+  margin-top: 5rem;
+
+  padding-top: 2rem;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 3rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.about-final__bottom p {
+  max-width: 38ch;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.about-final__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding: 1rem 1.5rem;
+
+  background: var(--white);
+  color: var(--black);
+
+  font-weight: 700;
+
+  transition:
+    background 0.25s var(--ease),
+    color 0.25s var(--ease);
+}
+
+.about-final__button:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 900px) {
+  .about-story__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-disciplines__head {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-disciplines__head h2 {
+    grid-column: auto;
+  }
+
+  .about-disciplines__statement {
+    max-width: 42ch;
+  }
+
+  .about-final__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    min-height: 85vh;
+
+    padding-top: calc(var(--nav-h) + 3rem);
+    padding-bottom: 4rem;
+  }
+
+  .about-hero__title {
+    margin-top: 2rem;
+    font-size: 20vw;
+  }
+
+  .about-hero__intro {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+  }
+
+  .about-hero__arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .about-story__main {
+    font-size: 2rem;
+  }
+
+  .discipline-row {
+    min-height: 5.5rem;
+
+    grid-template-columns:
+      2.5rem
+      1fr
+      auto;
+
+    gap: 0.75rem;
+  }
+
+  .discipline-row h3 {
+    font-size: 1.5rem;
+  }
+
+  .discipline-row svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .about-quote__text {
+    font-size: 3rem;
+  }
+
+  .about-final__title {
+    font-size: 18vw;
+  }
+}

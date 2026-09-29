@@ -1,0 +1,500 @@
+/* ==========================================================
+   MENTORSHIP PAGE
+   ========================================================== */
+
+.mentorship-page {
+  background: var(--white);
+  color: var(--black);
+}
+
+.mentorship-container {
+  width: 100%;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+}
+
+
+/* ==========================================================
+   LABEL
+   ========================================================== */
+
+.mentorship-label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.mentorship-label span {
+  color: var(--red);
+}
+
+.mentorship-label--light {
+  color: var(--white);
+}
+
+.mentorship-label--light span {
+  color: var(--yellow);
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.mentorship-hero {
+  min-height: 92vh;
+
+  padding-top: calc(var(--nav-h) + 4rem);
+  padding-bottom: 5rem;
+
+  display: flex;
+  align-items: flex-end;
+
+  border-bottom: 1px solid var(--black);
+}
+
+.mentorship-hero__title {
+  margin-top: clamp(3rem, 8vw, 7rem);
+
+  font-size: clamp(4.8rem, 13vw, 14rem);
+  font-weight: 900;
+  font-stretch: 75%;
+  line-height: 0.78;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.mentorship-hero__title span {
+  color: var(--red);
+}
+
+.mentorship-hero__bottom {
+  margin-top: clamp(3rem, 7vw, 6rem);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 2rem;
+}
+
+.mentorship-hero__bottom p {
+  font-size: clamp(1.3rem, 2.4vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.mentorship-hero__arrow {
+  width: 54px;
+  height: 54px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--black);
+
+  font-size: 1.5rem;
+}
+
+
+/* ==========================================================
+   EXPERIENCE
+   ========================================================== */
+
+.mentorship-experience {
+  padding-top: clamp(6rem, 10vw, 10rem);
+  padding-bottom: clamp(6rem, 10vw, 10rem);
+
+  background: var(--grey);
+}
+
+.mentorship-experience__intro {
+  display: grid;
+  grid-template-columns: 1fr 0.65fr;
+
+  gap: 3rem;
+
+  margin-bottom: clamp(4rem, 7vw, 7rem);
+}
+
+.mentorship-experience__intro h2 {
+  margin-top: 3rem;
+
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 900;
+  font-stretch: 75%;
+  line-height: 0.82;
+  letter-spacing: -0.055em;
+}
+
+.mentorship-experience__intro h2 span {
+  color: var(--red);
+}
+
+.mentorship-experience__intro-copy {
+  align-self: end;
+
+  max-width: 40ch;
+
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+
+/* ==========================================================
+   EXPERIENCE CARDS
+   ========================================================== */
+
+.mentorship-experience__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1rem;
+}
+
+.mentorship-card {
+  min-height: 30rem;
+
+  padding: 1.5rem;
+
+  background: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid var(--black);
+
+  transition:
+    background 0.4s var(--ease),
+    color 0.4s var(--ease),
+    transform 0.4s var(--ease);
+}
+
+.mentorship-card:hover {
+  background: var(--mentorship-color);
+  color: var(--mentorship-ink);
+
+  transform: translateY(-8px);
+}
+
+.mentorship-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mentorship-card__top span {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.mentorship-card__content h3 {
+  max-width: 10ch;
+
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 900;
+  font-stretch: 75%;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.mentorship-card__content p {
+  max-width: 35ch;
+
+  margin-top: 1.5rem;
+
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+/* ==========================================================
+   WORKING MODEL
+   ========================================================== */
+
+.mentorship-model {
+  padding-top: clamp(6rem, 11vw, 11rem);
+  padding-bottom: clamp(6rem, 11vw, 11rem);
+
+  background: var(--black);
+  color: var(--white);
+}
+
+.mentorship-model__title {
+  margin-top: clamp(3rem, 7vw, 6rem);
+
+  font-size: clamp(4.5rem, 11vw, 12rem);
+  font-weight: 900;
+  font-stretch: 75%;
+  line-height: 0.78;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.mentorship-model__title span {
+  color: var(--red);
+}
+
+.mentorship-model__intro {
+  max-width: 42ch;
+
+  margin-top: clamp(3rem, 6vw, 6rem);
+  margin-left: auto;
+
+  color: var(--grey);
+
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+
+/* ==========================================================
+   MODEL LIST
+   ========================================================== */
+
+.mentorship-model__list {
+  margin-top: clamp(5rem, 9vw, 9rem);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.model-row {
+  min-height: 8rem;
+
+  display: grid;
+  grid-template-columns: 5rem 1fr auto;
+
+  align-items: center;
+
+  gap: 2rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+
+  transition:
+    padding 0.35s var(--ease),
+    background 0.35s var(--ease),
+    color 0.35s var(--ease);
+}
+
+.model-row:hover {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  background: var(--white);
+  color: var(--black);
+}
+
+.model-row__number {
+  color: var(--red);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.model-row__main {
+  display: flex;
+  align-items: baseline;
+
+  gap: 2rem;
+}
+
+.model-row__main h3 {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  font-weight: 900;
+  font-stretch: 75%;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.model-row__main p {
+  color: var(--grey);
+
+  font-size: 0.85rem;
+}
+
+.model-row:hover .model-row__main p {
+  color: var(--black);
+}
+
+.model-row__arrow {
+  transition: transform 0.3s var(--ease);
+}
+
+.model-row:hover .model-row__arrow {
+  transform: translate(4px, -4px);
+}
+
+
+/* ==========================================================
+   CLOSING
+   ========================================================== */
+
+.mentorship-closing {
+  padding-top: clamp(6rem, 11vw, 11rem);
+  padding-bottom: clamp(6rem, 11vw, 11rem);
+
+  background: var(--red);
+  color: var(--white);
+}
+
+.mentorship-closing .mentorship-label span {
+  color: var(--yellow);
+}
+
+.mentorship-closing__title {
+  margin-top: clamp(3rem, 7vw, 6rem);
+
+  font-size: clamp(4.5rem, 11vw, 12rem);
+  font-weight: 900;
+  font-stretch: 75%;
+  line-height: 0.78;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.mentorship-closing__title span {
+  color: var(--black);
+}
+
+.mentorship-closing__bottom {
+  margin-top: clamp(4rem, 8vw, 8rem);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 3rem;
+}
+
+.mentorship-closing__bottom p {
+  max-width: 38ch;
+
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.mentorship-closing__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding: 1rem 1.2rem;
+
+  background: var(--black);
+  color: var(--white);
+
+  font-size: 0.85rem;
+  font-weight: 800;
+
+  transition:
+    gap 0.25s var(--ease),
+    background 0.25s var(--ease);
+}
+
+.mentorship-closing__button:hover {
+  gap: 1rem;
+  background: var(--white);
+  color: var(--black);
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+  .mentorship-experience__intro {
+    grid-template-columns: 1fr;
+  }
+
+  .mentorship-experience__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mentorship-card {
+    min-height: 24rem;
+  }
+
+  .mentorship-model__intro {
+    margin-left: 0;
+  }
+
+  .model-row__main {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 600px) {
+
+  .mentorship-hero {
+    min-height: 85vh;
+
+    padding-top: calc(var(--nav-h) + 3rem);
+    padding-bottom: 4rem;
+  }
+
+  .mentorship-hero__title {
+    font-size: 18vw;
+  }
+
+  .mentorship-hero__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mentorship-experience__intro h2 {
+    font-size: 16vw;
+  }
+
+  .mentorship-card {
+    min-height: 22rem;
+  }
+
+  .mentorship-model__title {
+    font-size: 17vw;
+  }
+
+  .model-row {
+    grid-template-columns: 2.5rem 1fr auto;
+
+    gap: 0.75rem;
+
+    min-height: 7rem;
+  }
+
+  .model-row__main h3 {
+    font-size: 1.3rem;
+  }
+
+  .model-row__main p {
+    font-size: 0.75rem;
+  }
+
+  .mentorship-closing__title {
+    font-size: 17vw;
+  }
+
+  .mentorship-closing__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}

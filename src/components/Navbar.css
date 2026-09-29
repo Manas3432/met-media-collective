@@ -1,0 +1,111 @@
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
+  border-bottom: 1px solid transparent;
+}
+.nav--solid {
+  background: var(--white);
+  border-bottom-color: var(--black);
+}
+
+.nav__bar {
+  position: relative;
+  z-index: 2;
+  height: var(--nav-h);
+  padding: 0 var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: inherit;
+}
+
+.nav__logo {
+  font-size: 2rem;
+  font-weight: 900;
+  font-stretch: 75%;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.nav__logo span { color: var(--red); }
+
+.nav__links { display: none; gap: 2rem; }
+
+.nav__link {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.3rem 0;
+}
+.nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease);
+}
+.nav__link:hover::after,
+.nav__link.active::after { transform: scaleX(1); }
+
+.nav__cta {
+  display: none;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.65rem 1.1rem;
+  background: var(--black);
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: background 0.25s var(--ease);
+}
+.nav__cta:hover { background: var(--red); }
+
+.nav__toggle {
+  display: grid;
+  place-items: center;
+  width: 44px; height: 44px;
+}
+
+/* Mobile overlay */
+.nav__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background: var(--black);
+  color: var(--white);
+  padding: calc(var(--nav-h) + 2rem) var(--pad) 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+.nav__mlink {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.4rem 0;
+  font-size: clamp(2.2rem, 10vw, 3.6rem);
+  font-weight: 800;
+  font-stretch: 75%;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.nav__mlink span { font-size: 0.8rem; font-weight: 600; color: var(--yellow); letter-spacing: 0.1em; }
+.nav__mlink.active { color: var(--red); }
+.nav__foot { color: var(--olive); margin-top: 2rem; }
+
+/* The mobile menu button sits on the dark overlay */
+.nav--solid .nav__bar { background: var(--white); }
+
+@media (min-width: 1000px) {
+  .nav__links { display: flex; }
+  .nav__cta { display: inline-flex; }
+  .nav__toggle { display: none; }
+  .nav__overlay { display: none; }
+}

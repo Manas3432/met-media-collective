@@ -1,0 +1,494 @@
+/* ==========================================================
+   OBJECTIVES PAGE
+   ========================================================== */
+
+.objectives-page {
+  background: var(--white);
+  color: var(--black);
+}
+
+.objectives-container {
+  width: 100%;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+}
+
+
+/* ==========================================================
+   SHARED LABEL
+   ========================================================== */
+
+.objectives-label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  margin: 0;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.objectives-label span {
+  color: var(--red);
+  font-size: 0.68rem;
+}
+
+.objectives-label--light {
+  color: var(--white);
+}
+
+.objectives-label--light span {
+  color: var(--yellow);
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.objectives-hero {
+  min-height: 92vh;
+
+  padding-top: calc(var(--nav-h) + 4rem);
+  padding-bottom: 5rem;
+
+  display: flex;
+  align-items: flex-end;
+
+  background: var(--white);
+}
+
+.objectives-hero__title {
+  margin-top: clamp(3rem, 8vw, 7rem);
+
+  max-width: 12ch;
+
+  font-size: clamp(4.2rem, 11vw, 11rem);
+  font-weight: 900;
+  font-stretch: 75%;
+  line-height: 0.82;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+}
+
+.objectives-hero__title span {
+  color: var(--red);
+}
+
+.objectives-hero__bottom {
+  margin-top: clamp(3rem, 8vw, 6rem);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.objectives-hero__bottom p {
+  max-width: 16ch;
+
+  font-size: clamp(1.4rem, 2.5vw, 2.3rem);
+  font-weight: 700;
+  font-stretch: 85%;
+  line-height: 1.05;
+}
+
+.objectives-scroll {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding-bottom: 0.45rem;
+
+  border-bottom: 2px solid var(--black);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition:
+    color 0.25s var(--ease),
+    border-color 0.25s var(--ease),
+    gap 0.25s var(--ease);
+}
+
+.objectives-scroll:hover {
+  color: var(--red);
+  border-color: var(--red);
+  gap: 1rem;
+}
+
+
+/* ==========================================================
+   PILLARS
+   ========================================================== */
+
+.objectives-pillars {
+  padding-top: clamp(5rem, 9vw, 9rem);
+  padding-bottom: clamp(6rem, 10vw, 10rem);
+
+  background: var(--grey);
+}
+
+.objectives-pillars__intro {
+  display: grid;
+  gap: 2rem;
+
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.objectives-pillars__intro h2 {
+  font-size: clamp(3.2rem, 8vw, 8rem);
+  font-weight: 900;
+  font-stretch: 75%;
+  line-height: 0.84;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.objectives-pillars__intro h2 span {
+  color: var(--red);
+}
+
+.objectives-pillars__intro-text {
+  max-width: 38ch;
+}
+
+.objectives-pillars__intro-text p {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  line-height: 1.3;
+}
+
+
+/* ==========================================================
+   OBJECTIVE ROW
+   ========================================================== */
+
+.objective-list {
+  border-top: 1px solid var(--black);
+}
+
+.objective {
+  position: relative;
+
+  padding: clamp(2rem, 4vw, 3.5rem) 0;
+
+  border-bottom: 1px solid var(--black);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  overflow: hidden;
+
+  cursor: default;
+
+  transition:
+    background 0.45s var(--ease),
+    color 0.45s var(--ease);
+}
+
+.objective::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background: var(--objective-color);
+
+  transform: scaleY(0);
+  transform-origin: bottom;
+
+  transition: transform 0.45s var(--ease);
+
+  z-index: 0;
+}
+
+.objective:hover {
+  color: var(--objective-ink);
+}
+
+.objective:hover::before {
+  transform: scaleY(1);
+}
+
+.objective > * {
+  position: relative;
+  z-index: 1;
+}
+
+.objective__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.objective__number {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.objective__arrow {
+  display: grid;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid currentColor;
+
+  transition:
+    transform 0.4s var(--ease),
+    background 0.3s var(--ease);
+}
+
+.objective:hover .objective__arrow {
+  transform: rotate(45deg);
+}
+
+.objective__content {
+  max-width: 900px;
+}
+
+.objective__content h3 {
+  max-width: 12ch;
+
+  font-size: clamp(2.5rem, 6vw, 6.5rem);
+  font-weight: 900;
+  font-stretch: 75%;
+  line-height: 0.86;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+}
+
+.objective__content p {
+  max-width: 48ch;
+
+  margin-top: 1.75rem;
+
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.45;
+}
+
+.objective__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+
+  margin-top: 1.5rem;
+}
+
+.objective__tags span {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.45rem 0.7rem;
+
+  border: 1px solid currentColor;
+
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   CLOSING
+   ========================================================== */
+
+.objectives-closing {
+  padding-top: clamp(5rem, 9vw, 9rem);
+  padding-bottom: clamp(5rem, 9vw, 9rem);
+
+  background: var(--black);
+  color: var(--white);
+}
+
+.objectives-closing__title {
+  margin-top: clamp(3rem, 7vw, 6rem);
+
+  max-width: 11ch;
+
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 900;
+  font-stretch: 75%;
+  line-height: 0.82;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+}
+
+.objectives-closing__title span {
+  color: var(--red);
+}
+
+.objectives-closing__bottom {
+  margin-top: clamp(3rem, 7vw, 6rem);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.objectives-closing__bottom p {
+  max-width: 38ch;
+
+  color: var(--grey);
+
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.45;
+}
+
+.objectives-closing__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  padding: 1rem 1.4rem;
+
+  background: var(--white);
+  color: var(--black);
+
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  transition:
+    background 0.25s var(--ease),
+    color 0.25s var(--ease),
+    gap 0.25s var(--ease);
+}
+
+.objectives-closing__button:hover {
+  background: var(--red);
+  color: var(--white);
+  gap: 1rem;
+}
+
+
+/* ==========================================================
+   TABLET / DESKTOP
+   ========================================================== */
+
+@media (min-width: 760px) {
+
+  .objectives-pillars__intro {
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 0.45fr);
+    align-items: end;
+  }
+
+  .objective {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .objective__top {
+    display: contents;
+  }
+
+  .objective__arrow {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+  }
+
+  .objective__content {
+    padding-right: 5rem;
+  }
+
+  .objective__content h3 {
+    max-width: 15ch;
+  }
+
+}
+
+
+/* ==========================================================
+   LARGE DESKTOP
+   ========================================================== */
+
+@media (min-width: 1100px) {
+
+  .objectives-hero {
+    min-height: 94vh;
+  }
+
+  .objectives-hero__bottom {
+    max-width: 900px;
+  }
+
+  .objective {
+    grid-template-columns: 110px minmax(0, 1fr);
+  }
+
+  .objective__content {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(260px, 0.55fr);
+    column-gap: 4rem;
+    align-items: start;
+  }
+
+  .objective__content h3 {
+    grid-row: span 2;
+  }
+
+  .objective__content p {
+    margin-top: 0;
+  }
+
+  .objective__tags {
+    margin-top: 1.5rem;
+  }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 600px) {
+
+  .objectives-hero {
+    min-height: auto;
+    padding-top: calc(var(--nav-h) + 3rem);
+    padding-bottom: 4rem;
+  }
+
+  .objectives-hero__title {
+    margin-top: 3rem;
+
+    font-size: clamp(3.8rem, 17vw, 6rem);
+  }
+
+  .objectives-hero__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .objectives-pillars__intro h2 {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+
+  .objective__content h3 {
+    font-size: clamp(2.5rem, 12vw, 4.5rem);
+  }
+
+  .objective__arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .objectives-closing__title {
+    font-size: clamp(3.8rem, 16vw, 6rem);
+  }
+
+  .objectives-closing__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
