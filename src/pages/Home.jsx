@@ -923,19 +923,15 @@ function Footer() {
   return (
     <footer className="footer">
       <p className="footer__mark" aria-hidden="true">
-        MET<span>.</span>
-      </p>
+  <span className="footer__letter">M</span>
+  <span className="footer__letter">E</span>
+  <span className="footer__letter">T</span>
+  <span className="footer__dot">.</span>
+</p>
 
-      <p
-        style={{
-          maxWidth: '32rem',
-          marginBottom: '2rem',
-          fontSize: '1.1rem',
-          fontWeight: 600,
-        }}
-      >
-        "Not a Classroom. Not a Workshop. A Real Agency."
-      </p>
+      <p className="footer__tagline">
+  "Not a Classroom. Not a Workshop. A Real Agency."
+</p>
 
       <div className="footer__row">
         <nav aria-label="Footer">
