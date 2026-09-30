@@ -60,7 +60,7 @@ const VERTICALS = [
  */
 const WORK = [
   {
-    cat: 'Campaign',
+    cat: 'Film / Content',
     title: 'Featured Work',
     meta: 'Coming soon',
     tone: 'red',
