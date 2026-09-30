@@ -45,8 +45,8 @@ export default function Navbar() {
     <header className={`nav ${scrolled || open ? 'nav--solid' : ''}`}>
       <div className="nav__bar">
         <Link to="/" className="nav__logo" aria-label="MET Media Collective, home">
-          MET<span>.</span>
-        </Link>
+  <img src="/met-logo.svg" alt="MET Media Collective" />
+</Link>
 
         <nav className="nav__links" aria-label="Primary">
           {LINKS.map((l) => (

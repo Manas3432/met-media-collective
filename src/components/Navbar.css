@@ -23,13 +23,20 @@
 }
 
 .nav__logo {
-  font-size: 2rem;
-  font-weight: 900;
-  font-stretch: 75%;
-  letter-spacing: -0.04em;
-  line-height: 1;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 42px;
 }
-.nav__logo span { color: var(--red); }
+
+.nav__logo img {
+  display: block;
+  width: auto;
+  height: 65px;
+  max-width: 230px;
+  object-fit: contain;
+  transform: translateY(10px);
+}
 
 .nav__links { display: none; gap: 2rem; }
 
