@@ -73,7 +73,7 @@ const WORK = [
     meta: 'Coming soon',
     tone: 'blue',
     span: 'w5',
-    image: null,
+    image: '/national anthem .jpg',
   },
   {
     cat: 'Film / Content',
