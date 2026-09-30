@@ -26,16 +26,15 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  height: 42px;
+  height: 100%;
 }
 
 .nav__logo img {
   display: block;
   width: auto;
-  height: 65px;
-  max-width: 230px;
+  height: 58px;
+  max-width: 210px;
   object-fit: contain;
-  transform: translateY(10px);
 }
 
 .nav__links { display: none; gap: 2rem; }
@@ -108,7 +107,9 @@
 .nav__foot { color: var(--olive); margin-top: 2rem; }
 
 /* The mobile menu button sits on the dark overlay */
-.nav--solid .nav__bar { background: var(--white); }
+.nav--solid .nav__bar {
+  background: var(--white);
+}
 
 @media (min-width: 1000px) {
   .nav__links { display: flex; }
