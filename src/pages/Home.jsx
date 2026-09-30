@@ -61,51 +61,15 @@ const VERTICALS = [
 const WORK = [
   {
     cat: 'Film / Content',
-    title: 'Featured Work',
-    meta: 'Coming soon',
     tone: 'red',
     span: 'w7',
     image: '/house-of-white-circles.jpeg',
   },
   {
     cat: 'Film / Content',
-    title: 'Featured Work',
-    meta: 'Coming soon',
     tone: 'blue',
     span: 'w5',
     image: '/national anthem .jpg',
-  },
-  {
-    cat: 'Film / Content',
-    title: 'Featured Work',
-    meta: 'Coming soon',
-    tone: 'yellow',
-    span: 'w4',
-    image: null,
-  },
-  {
-    cat: 'Events',
-    title: 'Featured Work',
-    meta: 'Coming soon',
-    tone: 'green',
-    span: 'w4',
-    image: null,
-  },
-  {
-    cat: 'Case Study',
-    title: 'Featured Work',
-    meta: 'Coming soon',
-    tone: 'orange',
-    span: 'w4',
-    image: null,
-  },
-  {
-    cat: 'Campaign',
-    title: 'Featured Work',
-    meta: 'Coming soon',
-    tone: 'olive',
-    span: 'w12',
-    image: null,
   },
 ]
 
