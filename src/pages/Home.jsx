@@ -68,7 +68,7 @@ const WORK = [
     image: '/house-of-white-circles.jpeg',
   },
   {
-    cat: 'Digital',
+    cat: 'Film / Content',
     title: 'Featured Work',
     meta: 'Coming soon',
     tone: 'blue',
@@ -303,7 +303,7 @@ function SectionHead({ num, label, title }) {
 
 function Visual({ tone = 'red', variant = 0, image, alt = '' }) {
   return (
-    <div className={`viz tone-${tone} viz--v${variant % 6}`}>
+    <div className={`viz tone-${tone} viz--v${variant % 6} ${image ? 'viz--image' : ''}`}>
       {image ? (
         <img
           className="viz__img"

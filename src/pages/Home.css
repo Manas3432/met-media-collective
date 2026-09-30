@@ -43,7 +43,22 @@
   aspect-ratio: 4 / 3;
   width: 100%;
 }
-.viz__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+.viz__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.viz--image {
+  background: var(--black);
+}
+
+.viz--image .viz__img {
+  object-fit: contain;
+}
 .viz__art { position: absolute; inset: 0; }
 .viz__art::before, .viz__art::after { content: ''; position: absolute; }
 
