@@ -49,12 +49,6 @@ const VERTICALS = [
     ink: '#111',
     text: 'News packages, features, interviews, and campus reporting with real editorial standards.',
   },
-  {
-    title: 'Data & Insights',
-    color: 'var(--olive)',
-    ink: '#fff',
-    text: 'Audience research, campaign measurement, and decision support to sharpen every strategy.',
-  },
 ]
 
 /*
@@ -71,7 +65,7 @@ const WORK = [
     meta: 'Coming soon',
     tone: 'red',
     span: 'w7',
-    image: null,
+    image: '/house-of-white-circles.jpeg',
   },
   {
     cat: 'Digital',
