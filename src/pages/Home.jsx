@@ -16,8 +16,6 @@ const HERO_VERTICALS = [
   'Entertainment & Events',
   'Journalism',
   'Cinematic Storytelling',
-  'Creative Technology',
-  'Data & Insights',
 ]
 
 const VERTICALS = [
