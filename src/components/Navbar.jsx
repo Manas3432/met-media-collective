@@ -8,7 +8,6 @@ const LINKS = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
   { to: '/objectives', label: 'Objectives' },
-  { to: '/verticals', label: 'Verticals' },
   { to: '/mentorship', label: 'Mentorship' },
   { to: '/work', label: 'Work' },
   { to: '/team', label: 'Team' },

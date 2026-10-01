@@ -350,9 +350,6 @@ function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.8 }}
         >
-          <Link to="/verticals" className="btn btn--dark">
-            Explore Collective <ArrowRight size={18} />
-          </Link>
 
           <Link to="/join" className="btn btn--ghost">
             Join Us
@@ -530,12 +527,6 @@ function Verticals() {
                     <div className="vrow__inner">
                       <p>{v.text}</p>
 
-                      <Link
-                        to="/verticals"
-                        className="textlink"
-                      >
-                        Explore <ArrowUpRight size={18} />
-                      </Link>
                     </div>
                   </motion.div>
                 )}

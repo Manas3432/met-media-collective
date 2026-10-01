@@ -4,7 +4,6 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import About from './pages/About'
 import Objectives from './pages/Objectives'
-import Verticals from './pages/Verticals'
 import Mentorship from './pages/Mentorship'
 import Team from './pages/Team'
 import Blog from './pages/Blog'
@@ -43,7 +42,6 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/objectives" element={<Objectives />} />
-        <Route path="/verticals" element={<Verticals />} />
         <Route path="/mentorship" element={<Mentorship />} />
         <Route path="/work" element={<Placeholder title="Work" />} />
         <Route path="/team" element={<Team />} />
