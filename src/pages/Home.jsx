@@ -60,19 +60,22 @@ const VERTICALS = [
  */
 const WORK = [
   {
-    cat: 'Film / Content',
+    heading: 'From Classroom Creativity to Award-Winning Cinema',
+    description:
+      'This achievement reflects the power of storytelling, creativity, and cinematic vision nurtured at MET Institute of Mass Media.',
     tone: 'red',
     span: 'w7',
     image: '/house-of-white-circles.jpeg',
   },
   {
-    cat: 'Film / Content',
+    heading: 'Mumbai Climate Week - National Anthem Rendition',
+    description:
+      'From direction to cinematography, coordination to post-production, our students led it with passion, professionalism, and purpose.',
     tone: 'blue',
     span: 'w5',
-    image: '/national anthem .jpg',
+    image: '/national-anthem.jpg',
   },
 ]
-
 const MENTORSHIP = [
   {
     title: 'Workshops & Inspiration Sessions',
@@ -288,7 +291,7 @@ function Visual({ tone = 'red', variant = 0, image, alt = '' }) {
 
 function Hero() {
   const reduce = useReducedMotion()
-  const lines = ['MET.', 'Media', 'Collective']
+  const lines = ['MET', 'Media', 'Collective']
 
   return (
     <section className="hero">
@@ -566,34 +569,33 @@ function Work() {
             delay={(i % 3) * 0.08}
           >
             <Link
-              to="/work"
-              className="wcard__link"
-              aria-label={`${w.title}, ${w.cat}`}
-            >
-              <div className="wcard__media">
-                <Visual
-                  tone={w.tone}
-                  variant={i}
-                  image={w.image}
-                  alt={`${w.title} — ${w.cat}`}
-                />
-
-                <span className="wcard__tag label">
-                  {w.cat}
-                </span>
-
-                <span
-                  className="wcard__go"
-                  aria-hidden="true"
-                >
-                  <ArrowUpRight size={22} />
-                </span>
-              </div>
-
+  to="/work"
+  className="wcard__link"
+  aria-label={w.heading}
+>
               <div className="wcard__info">
-                <h3>{w.title}</h3>
-                <span>{w.meta}</span>
-              </div>
+  <h3>{w.heading}</h3>
+</div>
+
+<div className="wcard__media">
+  <Visual
+    tone={w.tone}
+    variant={i}
+    image={w.image}
+    alt={w.heading}
+  />
+
+  <span
+    className="wcard__go"
+    aria-hidden="true"
+  >
+    <ArrowUpRight size={22} />
+  </span>
+</div>
+
+<p className="wcard__description">
+  {w.description}
+</p>
             </Link>
           </Reveal>
         ))}
@@ -601,7 +603,74 @@ function Work() {
     </section>
   )
 }
+/* ==========================================================
+   OUR CLIENTS
+   ========================================================== */
 
+const CLIENTS = [
+  {
+    name: '3sof',
+    logo: '/3sof.png',
+  },
+  {
+    name: 'AIKONS',
+    logo: '/aikons.png',
+  },
+  {
+    name: 'Bounty Box',
+    logo: '/bounty-box.png',
+  },
+  {
+    name: 'Culture Shock',
+    logo: '/culture-shock.png',
+  },
+  {
+    name: 'Prachand',
+    logo: '/prachand.png',
+  },
+  {
+    name: 'Divine Events',
+    logo: '/divine-events.png',
+  },
+]
+
+function Clients() {
+  return (
+    <section className="clients" id="clients" data-cursor-theme="dark">
+      <div className="clients__inner">
+
+        <div className="clients__copy">
+          <SectionHead
+            num="04"
+            label="Our Clients"
+            title="Late night efforts, mesmerizing stories & fun collaborations"
+          />
+
+          <p className="clients__description">
+            Collaborations &amp; Chemistry paired with a “few” rounds of
+            constructive feedback have led to some of our best work! Thanks
+            to our clients, for their faith and the opportunities.
+          </p>
+        </div>
+
+        <div className="clients__logos">
+          {CLIENTS.map((client, index) => (
+            <div
+              className={`client-logo client-logo--${index + 1}`}
+              key={client.name}
+            >
+              <img
+                src={client.logo}
+                alt={client.name}
+              />
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  )
+}
 /* ==========================================================
    MENTORSHIP
    ========================================================== */
@@ -918,9 +987,9 @@ export default function Home() {
       <Intro />
       <Verticals />
       <Work />
-      <Mentorship />
-      <Team />
-      <Insights />
+<Clients />
+<Mentorship />
+<Insights />
       <JoinCTA />
       <Footer />
     </main>

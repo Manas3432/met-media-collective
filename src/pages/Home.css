@@ -229,7 +229,11 @@
 }
 .wcard__link:hover .wcard__go, .wcard__link:focus-visible .wcard__go { transform: none; opacity: 1; }
 
-.wcard__info { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding-top: 0.9rem; border-bottom: 2px solid transparent; }
+.wcard__info {
+  display: block;
+  padding-top: 0.9rem;
+  border-bottom: 2px solid transparent;
+}
 .wcard__info h3 {
   font-size: clamp(1.3rem, 2.2vw, 2rem);
   font-stretch: 75%;
@@ -240,6 +244,16 @@
 }
 .wcard__link:hover h3 { background-size: 100% 2px; }
 .wcard__info span { font-size: 0.85rem; font-weight: 600; }
+.wcard__description{
+  max-width: 100%;
+  margin-top: 0.75rem;
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+  color: var(--black);
+}
 
 @media (min-width: 760px) {
   .wcard.w7 { grid-column: span 7; }
@@ -252,6 +266,68 @@
 }
 @media (min-width: 1100px) {
   .wcard.w4 { grid-column: span 4; }
+}
+/* ---------- Our Clients ---------- */
+
+.clients {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+  background: var(--black);
+  color: var(--white);
+}
+
+.clients__overlay {
+  position: relative;
+  z-index: 1;
+  min-height: 620px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  align-items: center;
+  gap: 4rem;
+  padding: clamp(3rem, 7vw, 6rem) var(--pad);
+  background: var(--black);
+}
+
+.clients__copy {
+  max-width: 42rem;
+}
+
+.clients__copy .label {
+  margin-bottom: 1.5rem;
+}
+
+.clients__copy h2 {
+  font-size: clamp(3rem, 6vw, 6.5rem);
+  font-stretch: 75%;
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.clients__description {
+  max-width: 38rem;
+  margin-top: 1.5rem;
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  line-height: 1.4;
+}
+
+.clients__logos {
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 900px) {
+  .clients__overlay {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .clients__logos {
+    min-height: 220px;
+  }
 }
 
 /* ---------- Mentorship ---------- */
