@@ -10,7 +10,6 @@ const DISCIPLINES = [
   { name: 'Digital Marketing', color: '#208447', ink: '#FFFFFF' },
   { name: 'Journalism', color: '#F9C60F', ink: '#111111' },
   { name: 'Cinematic Storytelling', color: '#968E5B', ink: '#FFFFFF' },
-  { name: 'Creative Tech', color: '#111111', ink: '#FFFFFF' },
 ]
 
 const EASE = [0.2, 0.7, 0.2, 1]
@@ -80,9 +79,7 @@ export default function About() {
               Not a classroom, not a workshop.
             </p>
 
-            <div className="about-hero__arrow">
-              <ArrowDown />
-            </div>
+            
           </Reveal>
 
         </div>
@@ -161,7 +158,7 @@ export default function About() {
               delay={0.15}
             >
               <p>
-                Seven creative and strategic disciplines
+                Six creative and strategic disciplines
                 working together to bring ideas to life.
               </p>
             </Reveal>

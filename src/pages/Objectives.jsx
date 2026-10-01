@@ -236,7 +236,7 @@ export default function Objectives() {
         <div className="objectives-container">
 
           <Reveal className="objectives-closing__label">
-            <SectionLabel number="03" light>
+            <SectionLabel number="02" light>
               The Outcome
             </SectionLabel>
           </Reveal>

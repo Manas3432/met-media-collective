@@ -62,7 +62,7 @@
 }
 
 .objectives-hero__title {
-  margin-top: clamp(3rem, 8vw, 7rem);
+  margin-top: clamp(4.5rem, 10vw, 9rem);
 
   max-width: 12ch;
 
@@ -79,10 +79,10 @@
 }
 
 .objectives-hero__bottom {
-  margin-top: clamp(3rem, 8vw, 6rem);
+  margin-top: clamp(4rem, 7vw, 7rem);
 
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
 }
@@ -94,8 +94,9 @@
   font-weight: 700;
   font-stretch: 85%;
   line-height: 1.05;
+margin-left: clamp(1rem, 2vw, 1.1rem);
+  transform: translateY(-1.5rem);
 }
-
 .objectives-scroll {
   display: inline-flex;
   align-items: center;
@@ -140,6 +141,8 @@
 }
 
 .objectives-pillars__intro h2 {
+  margin-top: clamp(2rem, 3vw, 3rem);
+
   font-size: clamp(3.2rem, 8vw, 8rem);
   font-weight: 900;
   font-stretch: 75%;
@@ -147,7 +150,6 @@
   letter-spacing: -0.05em;
   text-transform: uppercase;
 }
-
 .objectives-pillars__intro h2 span {
   color: var(--red);
 }
@@ -309,7 +311,7 @@
 }
 
 .objectives-closing__title {
-  margin-top: clamp(3rem, 7vw, 6rem);
+  margin-top: clamp(4.5rem, 8vw, 7rem);
 
   max-width: 11ch;
 
@@ -326,10 +328,10 @@
 }
 
 .objectives-closing__bottom {
-  margin-top: clamp(3rem, 7vw, 6rem);
+  margin-top: clamp(3rem, 5vw, 5rem);
 
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 3rem;
 }
@@ -376,9 +378,13 @@
 @media (min-width: 760px) {
 
   .objectives-pillars__intro {
-    grid-template-columns: minmax(0, 1fr) minmax(250px, 0.45fr);
-    align-items: end;
-  }
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 0.45fr);
+  align-items: center;
+}
+
+.objectives-pillars__intro-text {
+  padding-top: clamp(3.2rem, 4vw, 4.5rem);
+}
 
   .objective {
     grid-template-columns: 90px minmax(0, 1fr);
@@ -425,14 +431,16 @@
   }
 
   .objective__content {
-    display: grid;
-    grid-template-columns: minmax(300px, 1fr) minmax(260px, 0.55fr);
-    column-gap: 4rem;
-    align-items: start;
-  }
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  column-gap: clamp(4rem, 6vw, 7rem);
+  align-items: start;
+  max-width: 1200px;
+}
 
   .objective__content h3 {
     grid-row: span 2;
+    max-width: 12ch;
   }
 
   .objective__content p {

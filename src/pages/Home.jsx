@@ -40,14 +40,20 @@ const VERTICALS = [
   {
     title: 'Entertainment & Films',
     color: 'var(--orange)',
-    ink: '#111',
+    ink: '#fff',
     text: 'Short films, branded content, and end-to-end event activations from concept to screen.',
   },
   {
     title: 'Journalism',
     color: 'var(--yellow)',
-    ink: '#111',
+    ink: '#fff',
     text: 'News packages, features, interviews, and campus reporting with real editorial standards.',
+  },
+  {
+    title: 'Cinematic Storytelling',
+    color: 'var(--olive)',
+    ink: '#fff',
+    text: 'Short films, branded content, and cinematic storytelling from concept to screen.',
   },
 ]
 
@@ -792,91 +798,13 @@ function Team() {
 }
 
 /* ==========================================================
-   BLOG / INSIGHTS
-   ========================================================== */
-
-function Insights() {
-  const [feat, ...rest] = ARTICLES
-
-  return (
-    <section className="sec insights" id="blog">
-      <div className="work__head">
-        <SectionHead
-          num="06"
-          label="Blog / Latest From The Collective"
-          title="Stories. Trends. Showcases."
-        />
-
-        <Link to="/blog" className="textlink">
-          View All Posts <ArrowUpRight size={18} />
-        </Link>
-      </div>
-
-      <div className="insights__grid">
-        <Reveal className="feature">
-          <Link to="/blog">
-            <Visual
-              tone={feat.tone}
-              variant={4}
-              alt={feat.title}
-            />
-
-            <p className="label feature__meta">
-              {feat.cat} — {feat.date}
-            </p>
-
-            <h3>{feat.title}</h3>
-
-            <p>{feat.excerpt}</p>
-
-            <span
-              className="textlink"
-              style={{ marginTop: '1rem' }}
-            >
-              Read Article <ArrowUpRight size={18} />
-            </span>
-          </Link>
-        </Reveal>
-
-        <ul className="alist">
-          {rest.map((article, i) => (
-            <Reveal
-              as="li"
-              key={article.title}
-              delay={i * 0.08}
-            >
-              <Link to="/blog" className="arow">
-                <span className="label">
-                  {article.cat}
-                </span>
-
-                <h3>{article.title}</h3>
-
-                <span className="arow__date">
-                  {article.date}
-                </span>
-
-                <ArrowUpRight
-                  size={22}
-                  aria-hidden="true"
-                />
-              </Link>
-            </Reveal>
-          ))}
-        </ul>
-      </div>
-    </section>
-  )
-}
-
-/* ==========================================================
    JOIN CTA
    ========================================================== */
 
 function JoinCTA() {
   return (
     <section className="cta" id="join">
-      <p className="label">07 — Join Us / Contact</p>
+      <p className="label">06 — Join Us / Contact</p>
 
       <Reveal as="h2" className="cta__title">
         Wanna make
@@ -939,58 +867,6 @@ function JoinCTA() {
     </section>
   )
 }
-
-/* ==========================================================
-   FOOTER
-   ========================================================== */
-
-function Footer() {
-  const links = [
-    { label: 'About', to: '/about' },
-    { label: 'Objectives', to: '/objectives' },
-    { label: 'Verticals', to: '/verticals' },
-    { label: 'Mentorship', to: '/mentorship' },
-    { label: 'Team', to: '/team' },
-    { label: 'Blog', to: '/blog' },
-    { label: 'Contact', to: '/contact' },
-    { label: 'Join Us', to: '/join' },
-  ]
-
-  return (
-    <footer className="footer">
-      <p className="footer__mark" aria-hidden="true">
-  <span className="footer__letter">M</span>
-  <span className="footer__letter">E</span>
-  <span className="footer__letter">T</span>
-  <span className="footer__dot">.</span>
-</p>
-
-      <p className="footer__tagline">
-  "Not a Classroom. Not a Workshop. A Real Agency."
-</p>
-
-      <div className="footer__row">
-        <nav aria-label="Footer">
-          {links.map((link) => (
-            <Link key={link.to} to={link.to}>
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        <p>
-          © {new Date().getFullYear()} MET Media Collective ·
-          MET IMM, Mumbai
-        </p>
-      </div>
-    </footer>
-  )
-}
-
-/* ==========================================================
-   HOME
-   ========================================================== */
-
 export default function Home() {
   return (
     <main>
@@ -1000,9 +876,7 @@ export default function Home() {
       <Work />
 <Clients />
 <Mentorship />
-<Insights />
       <JoinCTA />
-      <Footer />
     </main>
   )
 }
