@@ -654,18 +654,29 @@ function Clients() {
         </div>
 
         <div className="clients__logos">
-          {CLIENTS.map((client, index) => (
-            <div
-              className={`client-logo client-logo--${index + 1}`}
-              key={client.name}
-            >
-              <img
-                src={client.logo}
-                alt={client.name}
-              />
-            </div>
-          ))}
-        </div>
+  {CLIENTS.map((client, index) => (
+    <motion.div
+      className={`client-logo client-logo--${index + 1}`}
+      key={client.name}
+      initial={{ opacity: 0, y: 35 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{
+        once: false,
+        amount: 0.25,
+      }}
+      transition={{
+        duration: 0.8,
+        delay: index * 0.1,
+        ease: EASE,
+      }}
+    >
+      <img
+        src={client.logo}
+        alt={client.name}
+      />
+    </motion.div>
+  ))}
+</div>
 
       </div>
     </section>
@@ -679,7 +690,7 @@ function Mentorship() {
   return (
     <section className="sec dark mentor" id="mentorship">
       <SectionHead
-        num="04"
+        num="05"
         label="Mentorship"
         title="Learn from practitioners."
       />
