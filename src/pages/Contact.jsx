@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { supabase } from '../lib/supabaseClient'
 import { ArrowRight, ArrowUpRight, Mail, MapPin } from 'lucide-react'
 import { motion, useReducedMotion } from 'framer-motion'
 import './Contact.css'
@@ -41,11 +42,43 @@ function Label({ number, children, light = false }) {
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
+const [submitting, setSubmitting] = useState(false)
 
-  function handleSubmit(event) {
-    event.preventDefault()
-    setSubmitted(true)
+async function handleSubmit(event) {
+  event.preventDefault()
+
+  const form = event.currentTarget
+
+  const formData = new FormData(form)
+
+  const name = formData.get('name')
+  const email = formData.get('email')
+  const subject = formData.get('subject')
+  const message = formData.get('message')
+
+  setSubmitting(true)
+
+  const { error } = await supabase
+    .from('join_submissions')
+    .insert([
+      {
+        name,
+        email,
+        subject,
+        message,
+      },
+    ])
+
+  setSubmitting(false)
+
+  if (error) {
+    console.error('Submission error:', error)
+    alert('Something went wrong. Please try again.')
+    return
   }
+
+  setSubmitted(true)
+}
 
   return (
     <main className="contact-page">
@@ -256,12 +289,13 @@ export default function Contact() {
 
 
                   <button
-                    type="submit"
-                    className="contact-submit"
-                  >
-                    Send Message
-                    <ArrowRight size={19} />
-                  </button>
+  type="submit"
+  className="contact-submit"
+  disabled={submitting}
+>
+  {submitting ? 'Sending...' : 'Send Message'}
+  <ArrowRight size={19} />
+</button>
 
                 </form>
 
