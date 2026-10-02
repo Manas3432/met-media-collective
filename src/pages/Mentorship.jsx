@@ -6,27 +6,21 @@ import './Mentorship.css'
 const EXPERIENCES = [
   {
     number: '01',
-    title: 'Workshops & Inspiration Sessions',
+    title: 'Industry Insights',
     description:
-      'Learn directly from industry leaders through workshops and inspiration sessions.',
+      'Conversations with industry specialists, sharing real experiences, perspectives, and advice.',
     color: '#E31E24',
     ink: '#FFFFFF',
+    image: 'industry insights.jpg',
   },
   {
     number: '02',
-    title: 'Live Client Briefs',
+    title: 'Creators Court',
     description:
-      'Work on live briefs and participate in collaborative reviews in real time.',
+      'A space where creators share their stories, ideas, processes, and creative journeys.',
     color: '#16539F',
     ink: '#FFFFFF',
-  },
-  {
-    number: '03',
-    title: 'Portfolio Reviews & Showcases',
-    description:
-      'Present your work, receive meaningful feedback, and build a portfolio that reflects what you can actually do.',
-    color: '#208447',
-    ink: '#FFFFFF',
+    image: 'creators court.jpg',
   },
 ]
 
@@ -177,26 +171,31 @@ export default function Mentorship() {
 
             {EXPERIENCES.map((experience, index) => (
               <Reveal
-                key={experience.number}
-                className="mentorship-card"
-                delay={index * 0.08}
-                style={{
-                  '--mentorship-color': experience.color,
-                  '--mentorship-ink': experience.ink,
-                }}
-              >
-                <div className="mentorship-card__top">
-                  <span>{experience.number}</span>
+  key={experience.number}
+  className="mentorship-card"
+  delay={index * 0.08}
+  style={{
+    '--mentorship-color': experience.color,
+    '--mentorship-ink': experience.ink,
+  }}
+>
+  <div className="mentorship-card__image">
+    <img
+      src={experience.image}
+      alt={experience.title}
+    />
+  </div>
 
-                  <ArrowUpRight size={24} />
-                </div>
+  <div className="mentorship-card__top">
+    <span>{experience.number}</span>
+    <ArrowUpRight size={24} />
+  </div>
 
-                <div className="mentorship-card__content">
-                  <h3>{experience.title}</h3>
-
-                  <p>{experience.description}</p>
-                </div>
-              </Reveal>
+  <div className="mentorship-card__content">
+    <h3>{experience.title}</h3>
+    <p>{experience.description}</p>
+  </div>
+</Reveal>
             ))}
 
           </div>

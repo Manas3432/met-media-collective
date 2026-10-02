@@ -24,27 +24,15 @@ const TEAM = [
   },
   {
     role: 'CGO',
-    names: ['Akshata', 'Purva'],
+    names: ['Akshata', 'Hegde'],
     color: '#F9C60F',
     ink: '#111111',
   },
   {
-    role: 'Advertising Head',
-    names: ['Sahil', 'Anson'],
-    color: '#E2902A',
+    role: 'HR Head',
+    names: ['Purva', 'Mhatre'],
+    color: '#F9C60F',
     ink: '#111111',
-  },
-  {
-    role: 'PR Head',
-    names: ['Anuprita', 'Nitya'],
-    color: '#968E5B',
-    ink: '#FFFFFF',
-  },
-  {
-    role: 'Cinematic Storytelling',
-    names: ['Shawn', 'Chirag'],
-    color: '#111111',
-    ink: '#FFFFFF',
   },
 ]
 
@@ -250,14 +238,7 @@ export default function Team() {
               creative direction, and growth come together
               under one collective.
             </p>
-
-            <Link
-              to="/verticals"
-              className="team-statement__link"
-            >
-              Explore Verticals
-              <ArrowRight size={18} />
-            </Link>
+            
           </Reveal>
 
         </div>

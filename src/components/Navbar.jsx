@@ -12,7 +12,6 @@ const LINKS = [
   { to: '/work', label: 'Work' },
   { to: '/team', label: 'Team' },
   { to: '/blog', label: 'Blog' },
-  { to: '/contact', label: 'Contact' },
 ]
 
 export default function Navbar() {

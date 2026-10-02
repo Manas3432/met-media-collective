@@ -66,7 +66,7 @@ export default function Contact() {
             as="h1"
             className="contact-hero__title"
           >
-            LET'S
+            LET 'S
             <br />
             <span>MAKE</span>
             <br />
@@ -138,7 +138,8 @@ export default function Contact() {
 
                   <span>
                     <small>Email</small>
-                    <strong>contact@met.edu</strong>
+                    <strong>mmc@met.edu 
+</strong>
                   </span>
 
                   <ArrowUpRight size={18} />
@@ -162,24 +163,6 @@ export default function Contact() {
 
                   <ArrowUpRight size={18} />
                 </a>
-
-              </div>
-
-
-              <div className="contact-location">
-
-                <span className="contact-location__number">
-                  400
-                </span>
-
-                <div>
-                  <small>Institute</small>
-                  <p>
-                    MET IMM
-                    <br />
-                    MET College, Mumbai
-                  </p>
-                </div>
 
               </div>
 
@@ -400,7 +383,6 @@ export default function Contact() {
 
                 <a href="/about">About</a>
                 <a href="/objectives">Objectives</a>
-                <a href="/verticals">Verticals</a>
                 <a href="/mentorship">Mentorship</a>
               </div>
 

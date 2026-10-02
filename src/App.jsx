@@ -46,7 +46,6 @@ export default function App() {
         <Route path="/work" element={<Placeholder title="Work" />} />
         <Route path="/team" element={<Team />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/join" element={<Contact />} /> 
         <Route path="*" element={<Placeholder title="Page not found" />} />
       </Routes>

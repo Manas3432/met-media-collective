@@ -153,28 +153,42 @@
 
 .mentorship-experience__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   gap: 1rem;
 }
 
 .mentorship-card {
-  min-height: 30rem;
-
+  min-height: 42rem;
   padding: 1.5rem;
-
   background: var(--white);
-
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
   border: 1px solid var(--black);
-
   transition:
     background 0.4s var(--ease),
     color 0.4s var(--ease),
     transform 0.4s var(--ease);
+}
+
+.mentorship-card__image {
+  width: 100%;
+  height: 27rem;
+  overflow: hidden;
+  background: var(--grey);
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.mentorship-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.mentorship-card:hover .mentorship-card__image img {
+  transform: scale(1.04);
 }
 
 .mentorship-card:hover {
@@ -190,15 +204,17 @@
   justify-content: space-between;
 }
 
-.mentorship-card__top span {
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+.mentorship-card:nth-child(2) .mentorship-card__top span {
+  transform: translateX(0.3rem);
+}
+
+
+.mentorship-card__content {
+  margin-top: 0;
 }
 
 .mentorship-card__content h3 {
   max-width: 10ch;
-
   font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 900;
   font-stretch: 75%;
@@ -209,9 +225,7 @@
 
 .mentorship-card__content p {
   max-width: 35ch;
-
   margin-top: 1.5rem;
-
   font-size: 0.95rem;
   line-height: 1.5;
 }
