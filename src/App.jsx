@@ -5,10 +5,12 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Objectives from './pages/Objectives'
 import Mentorship from './pages/Mentorship'
+import Work from './pages/Work'
 import Team from './pages/Team'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import CustomCursor from './components/CustomCursor'
+import BlogArticle from './pages/BlogArticle'
 
 function ScrollToTop() {
   const { pathname, key } = useLocation()
@@ -43,9 +45,11 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/objectives" element={<Objectives />} />
         <Route path="/mentorship" element={<Mentorship />} />
-        <Route path="/work" element={<Placeholder title="Work" />} />
+        <Route path="/work" element={<Work />} />
         <Route path="/team" element={<Team />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/real-media-agency" element={<BlogArticle />} />
+        <Route path="/blog/when-students-take-the-lead" element={<BlogArticle />} />
         <Route path="/join" element={<Contact />} /> 
         <Route path="*" element={<Placeholder title="Page not found" />} />
       </Routes>

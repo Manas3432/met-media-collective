@@ -107,7 +107,7 @@ export default function Team() {
             </p>
 
             <div className="team-hero__count">
-              <strong>07</strong>
+              <strong>05</strong>
               <span>Leadership roles</span>
             </div>
           </Reveal>

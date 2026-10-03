@@ -1,0 +1,332 @@
+/* ==========================================================
+   WORK PAGE
+   ========================================================== */
+
+.work-page {
+  background: var(--white);
+  color: var(--black);
+}
+
+.work-container {
+  width: 100%;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+}
+
+
+/* ==========================================================
+   LABEL
+   ========================================================== */
+
+.work-label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.work-label span {
+  color: var(--red);
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.work-hero {
+  min-height: 92vh;
+
+  padding-top: calc(var(--nav-h) + 4rem);
+  padding-bottom: 5rem;
+
+  display: flex;
+  align-items: flex-end;
+
+  border-bottom: 1px solid var(--black);
+}
+
+.work-hero__title {
+  margin-top: clamp(3rem, 8vw, 7rem);
+
+  font-size: clamp(4.8rem, 13vw, 14rem);
+  font-weight: 900;
+  font-stretch: 75%;
+  line-height: 0.78;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.work-hero__title span {
+  color: var(--red);
+}
+
+.work-hero__bottom {
+  margin-top: clamp(3rem, 7vw, 6rem);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 2rem;
+}
+
+.work-hero__bottom p {
+  font-size: clamp(1.3rem, 2.4vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.work-hero__arrow {
+  width: 54px;
+  height: 54px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--black);
+
+  font-size: 1.5rem;
+}
+
+
+/* ==========================================================
+   PROJECTS
+   ========================================================== */
+
+.work-projects {
+  padding-top: clamp(6rem, 10vw, 10rem);
+  padding-bottom: clamp(6rem, 10vw, 10rem);
+
+  background: var(--grey);
+}
+
+.work-projects__intro {
+  display: grid;
+  grid-template-columns: 1fr 0.65fr;
+
+  gap: 3rem;
+
+  margin-bottom: clamp(4rem, 7vw, 7rem);
+}
+
+.work-projects__intro h2 {
+  margin-top: 3rem;
+
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 900;
+  font-stretch: 75%;
+  line-height: 0.82;
+  letter-spacing: -0.055em;
+}
+
+.work-projects__intro h2 span {
+  color: var(--red);
+}
+
+.work-projects__intro-copy {
+  align-self: end;
+
+  max-width: 40ch;
+
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+
+/* ==========================================================
+   PROJECT GRID
+   ========================================================== */
+
+.work-projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+
+/* ==========================================================
+   WORK CARD
+   ========================================================== */
+
+.work-card {
+  min-height: 42rem;
+
+  padding: 1.5rem;
+
+  background: var(--white);
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid var(--black);
+
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    background 0.4s var(--ease),
+    color 0.4s var(--ease),
+    transform 0.4s var(--ease);
+}
+
+.work-card:hover {
+  transform: translateY(-8px);
+}
+
+
+/* ==========================================================
+   IMAGE SLIDESHOW
+   ========================================================== */
+
+.work-card__image {
+  position: relative;
+
+  width: 100%;
+  height: 27rem;
+
+  overflow: hidden;
+
+  background: var(--grey);
+
+  margin-bottom: 1.5rem;
+
+  flex-shrink: 0;
+}
+
+.work-card__slide {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+
+  will-change: opacity, transform;
+}
+
+
+/* ==========================================================
+   CARD TOP
+   ========================================================== */
+
+.work-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.work-card__top span {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+
+/* ==========================================================
+   CARD CONTENT
+   ========================================================== */
+
+.work-card__content {
+  margin-top: 0;
+}
+
+.work-card__content h3 {
+  max-width: 16ch;
+
+  font-size: clamp(2rem, 3vw, 3rem);
+
+  font-weight: 900;
+  font-stretch: 75%;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.04em;
+
+  text-transform: uppercase;
+}
+
+.work-card__content p {
+  max-width: 35ch;
+
+  margin-top: 1.5rem;
+
+  font-size: 0.95rem;
+
+  line-height: 1.5;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+  .work-projects__intro {
+    grid-template-columns: 1fr;
+  }
+
+  .work-projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-card {
+    min-height: 24rem;
+  }
+
+  .work-projects__intro-copy {
+    align-self: start;
+  }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 600px) {
+
+  .work-hero {
+    min-height: 85vh;
+
+    padding-top: calc(var(--nav-h) + 3rem);
+    padding-bottom: 4rem;
+  }
+
+  .work-hero__title {
+    font-size: 18vw;
+  }
+
+  .work-hero__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .work-projects__intro h2 {
+    font-size: 16vw;
+  }
+
+  .work-card {
+    min-height: 22rem;
+  }
+
+  .work-card__image {
+    height: 22rem;
+  }
+
+  .work-card__content h3 {
+    font-size: 2rem;
+  }
+
+}

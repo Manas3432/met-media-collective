@@ -5,29 +5,31 @@ import './Blog.css'
 
 const ARTICLES = [
   {
-    number: '01',
-    category: 'Industry News',
-    date: 'March 2025',
-    title: 'AI in Media 2025',
-    subtitle: 'How AI is Reshaping the Future of Advertising & Content Creation',
-    description:
-      "From generative visuals to AI-written copy, the media industry is undergoing its biggest transformation yet. Here's what every media professional needs to know heading into 2025.",
-    icon: '✦',
-    color: '#E31E24',
-    ink: '#FFFFFF',
-  },
+  number: '01',
+  category: 'MMC / THE COLLECTIVE',
+  date: 'October 2025',
+  title: 'What Happens When Students Run a Real Media Agency?',
+  subtitle:
+    'Because the best way to understand media, might be to make it.',
+  description:
+    'There is a certain difference between learning about the media industry and actually being asked to function within it.',
+  icon: '',
+  color: '#E31E24',
+  ink: '#FFFFFF',
+},
   {
-    number: '02',
-    category: 'Student Showcase',
-    date: 'February 2025',
-    title: 'Film Branding',
-    subtitle: 'Behind the Lens: Brand Film Shot in 48 Hours',
-    description:
-      'A real brief. A real deadline. Zero sleep. How Team Cinematic Storytelling pulled off an end-to-end brand film sprint.',
-    icon: '◉',
-    color: '#E2902A',
-    ink: '#111111',
-  },
+  number: '02',
+  category: 'MMC / THE COLLECTIVE',
+  date: '',
+  title: 'When Students Take the Lead',
+  subtitle:
+    'From studying communication to experiencing what it means to create it.',
+  description:
+    'There is a point in every media student’s journey when the way we look at communication begins to change.',
+  icon: '',
+  color: '#E2902A',
+  ink: '#111111',
+},
   {
     number: '03',
     category: 'Industry News',
@@ -52,25 +54,8 @@ const ARTICLES = [
     color: '#16539F',
     ink: '#FFFFFF',
   },
-  {
-    number: '05',
-    category: 'Industry News',
-    date: 'November 2024',
-    title: 'Journalism Media',
-    subtitle: 'When Social Media Becomes the Newsroom',
-    description:
-      'Independent creators are breaking news faster than legacy outlets. What does this mean for the next generation of journalists?',
-    icon: '●',
-    color: '#F9C60F',
-    ink: '#111111',
-  },
 ]
 
-const CATEGORIES = [
-  'All',
-  'Industry News',
-  'Student Showcase',
-]
 
 const EASE = [0.2, 0.7, 0.2, 1]
 
@@ -145,7 +130,7 @@ export default function Blog() {
             </p>
 
             <div className="blog-hero__count">
-              <strong>05</strong>
+              <strong>04</strong>
               <span>Published stories</span>
             </div>
           </Reveal>
@@ -186,14 +171,12 @@ export default function Blog() {
           <div className="blog-feature">
 
             <Reveal className="blog-feature__visual">
-
-              <div className="blog-feature__visual-art">
-                <span>01</span>
-                <strong>AI</strong>
-                <em>MEDIA</em>
-              </div>
-
-            </Reveal>
+  <img
+    src="/Blog/Blog1.png"
+    alt="MET Media Collective"
+    className="blog-feature__image"
+  />
+</Reveal>
 
 
             <Reveal
@@ -218,17 +201,67 @@ export default function Blog() {
                 {ARTICLES[0].description}
               </p>
 
-              <Link
-                to="/blog"
-                className="blog-read-link"
-              >
-                Read Article
-                <ArrowUpRight size={18} />
-              </Link>
+              <a
+  href="/blog/real-media-agency"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="blog-read-link"
+>
+  Read the Blog
+  <ArrowUpRight size={18} />
+</a>
 
             </Reveal>
 
           </div>
+
+          <div className="blog-feature blog-feature--second">
+
+  <Reveal className="blog-feature__visual">
+    <img
+      src="/Blog/Blog2.png"
+      alt="When Students Take the Lead"
+      className="blog-feature__image"
+    />
+  </Reveal>
+
+  <Reveal
+    className="blog-feature__content"
+    delay={0.15}
+  >
+
+    <div className="blog-article-meta">
+      <span>{ARTICLES[1].category}</span>
+      {ARTICLES[1].date && (
+        <span>{ARTICLES[1].date}</span>
+      )}
+    </div>
+
+    <h2>
+      {ARTICLES[1].title}
+    </h2>
+
+    <h3>
+      {ARTICLES[1].subtitle}
+    </h3>
+
+    <p>
+      {ARTICLES[1].description}
+    </p>
+
+    <a
+      href="/blog/when-students-take-the-lead"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="blog-read-link"
+    >
+      Read the Blog
+      <ArrowUpRight size={18} />
+    </a>
+
+  </Reveal>
+
+</div>
 
 
           {/* =================================================
@@ -236,27 +269,10 @@ export default function Blog() {
               ================================================= */}
 
           <div className="blog-filter">
-
-            <span className="blog-filter__label">
-              Categories
-            </span>
-
-            <div className="blog-filter__items">
-              {CATEGORIES.map((category, index) => (
-                <button
-                  key={category}
-                  className={
-                    index === 0
-                      ? 'is-active'
-                      : ''
-                  }
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-
-          </div>
+  <span className="blog-filter__label">
+    Categories
+  </span>
+</div>
 
 
           {/* =================================================
@@ -265,7 +281,7 @@ export default function Blog() {
 
           <div className="blog-list">
 
-            {ARTICLES.slice(1).map((article, index) => (
+            {ARTICLES.slice(2).map((article, index) => (
 
               <Reveal
                 key={article.number}
@@ -288,7 +304,7 @@ export default function Blog() {
                   </span>
 
                   <span className="blog-card__visual-number">
-                    {article.number}
+                    {String(index + 1).padStart(2, '0')}
                   </span>
 
                 </div>
@@ -370,14 +386,6 @@ export default function Blog() {
               Stay curious. Follow the work, the ideas, and
               the conversations shaping media.
             </p>
-
-            <Link
-              to="/verticals"
-              className="blog-closing__button"
-            >
-              Explore Verticals
-              <ArrowRight size={18} />
-            </Link>
           </Reveal>
 
         </div>

@@ -826,7 +826,7 @@ function JoinCTA() {
           </Link>
 
           <Link
-            to="/contact"
+            to="/join"
             className="btn cta__ghost"
           >
             Contact
@@ -838,7 +838,7 @@ function JoinCTA() {
 
           <p>
             <a href="mailto:contact@met.edu">
-              contact@met.edu
+              mmc@met.edu
             </a>
           </p>
         </div>
@@ -849,9 +849,14 @@ function JoinCTA() {
           <p>MET IMM, Mumbai</p>
 
           <p style={{ marginTop: '0.5rem' }}>
-            <a href="#contact">
-              Visit MET IMM <ArrowUpRight size={14} />
-            </a>
+            <a
+  href="https://www.met.edu/institute/institute_of_mass_media"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Visit MET IMM
+  <ArrowUpRight size={18} />
+</a>
           </p>
         </div>
       </div>

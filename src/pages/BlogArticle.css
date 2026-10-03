@@ -1,0 +1,135 @@
+.blog-article-page {
+  background: var(--white);
+  color: var(--black);
+}
+
+.blog-article-hero {
+  padding-top: calc(var(--nav-h) + 7rem);
+  padding-bottom: 6rem;
+  border-bottom: 1px solid var(--black);
+}
+
+.blog-article-label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.blog-article-label span {
+  color: var(--red);
+}
+
+.blog-article-title {
+  max-width: 12ch;
+  margin-top: 4rem;
+  font-size: clamp(4rem, 9vw, 9rem);
+  font-weight: 900;
+  font-stretch: 75%;
+  line-height: 0.82;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.blog-article-subtitle {
+  max-width: 35ch;
+  margin-top: 2.5rem;
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.blog-article-author {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.blog-article-body {
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+  background: var(--grey);
+}
+
+.blog-article-image {
+  width: 100%;
+  max-height: 48rem;
+  overflow: hidden;
+  margin-bottom: 7rem;
+}
+
+.blog-article-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog-article-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.blog-article-content p {
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.blog-article-content h2 {
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 900;
+  font-stretch: 75%;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+}
+
+.blog-article-content strong {
+  font-weight: 800;
+}
+
+.blog-article-content em {
+  font-style: italic;
+}
+
+.blog-article-ending {
+  margin-top: 4rem !important;
+  font-size: 1.3rem !important;
+  font-weight: 800;
+}
+
+@media (max-width: 600px) {
+  .blog-article-hero {
+    padding-top: calc(var(--nav-h) + 4rem);
+    padding-bottom: 4rem;
+  }
+
+  .blog-article-title {
+    margin-top: 3rem;
+    font-size: 16vw;
+  }
+
+  .blog-article-body {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+  }
+
+  .blog-article-image {
+    margin-bottom: 4rem;
+  }
+
+  .blog-article-content p {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .blog-article-content h2 {
+    margin-top: 4rem;
+    font-size: 2.5rem;
+  }
+}
